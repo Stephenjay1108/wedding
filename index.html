@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stephen & Kathlene | Wedding</title>
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Cormorant+Garamond:wght@600;800&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+
+body{
+  font-family:'Poppins',sans-serif;
+  background:#f0f7ff;
+  color:#555;
+  line-height:1.7;
+}
+
+/* Fade animation */
+.fade{
+  opacity:0;
+  transform:translateY(30px);
+  animation:fadeIn 1.2s ease forwards;
+}
+
+@keyframes fadeIn{
+  to{opacity:1;transform:none;}
+}
+
+/* HEADER */
+header{
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  background:linear-gradient(rgba(219,234,254,.9),rgba(239,246,255,.9));
+}
+
+.hero .celebrate{
+  font-size:16px;
+  letter-spacing:4px;
+  text-transform:uppercase;
+  color:#5b7fa6;
+  margin-bottom:12px;
+}
+
+.hero .names{
+  font-family:'Alex Brush',cursive;
+  font-size:96px;
+  color:#5b7fa6;
+  line-height:1;
+}
+
+.hero h2{font-size:22px;margin-top:12px;}
+.hero p{margin-top:14px;font-size:18px;}
+
+.btn{
+  display:inline-block;
+  margin-top:34px;
+  padding:14px 38px;
+  background:#6b9ac4;
+  color:#fff;
+  text-decoration:none;
+  border-radius:30px;
+}
+
+/* SECTIONS */
+section{
+  max-width:1100px;
+  margin:auto;
+  padding:90px 20px;
+}
+
+h3{
+  text-align:center;
+  font-family:'Cormorant Garamond',serif;
+  font-size:42px;
+  color:#5b7fa6;
+  margin-bottom:40px;
+}
+
+/* Cards */
+.card{
+  background:#fff;
+  padding:30px;
+  border-radius:15px;
+  box-shadow:0 8px 20px rgba(0,0,0,.06);
+  text-align:center;
+}
+
+/* Countdown */
+#countdown{
+  display:flex;
+  justify-content:center;
+  gap:25px;
+  flex-wrap:wrap;
+}
+
+.time-box{
+  background:#fff;
+  width:140px;
+  padding:25px;
+  border-radius:12px;
+  box-shadow:0 6px 15px rgba(0,0,0,.08);
+}
+
+.time-box span{
+  display:block;
+  font-size:42px;
+  color:#6b9ac4;
+  font-weight:bold;
+}
+
+/* Forms */
+form{
+  max-width:600px;
+  margin:auto;
+  display:grid;
+  gap:15px;
+}
+
+input,textarea,select{
+  padding:14px;
+  border:1px solid #ddd;
+  border-radius:8px;
+}
+
+button{
+  padding:15px;
+  border:none;
+  background:#6b9ac4;
+  color:white;
+  border-radius:30px;
+  cursor:pointer;
+}
+
+/* Footer */
+footer{
+  text-align:center;
+  padding:40px;
+  background:#6b9ac4;
+  color:white;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="hero fade">
+    <p class="celebrate">Let’s celebrate</p>
+    <h1 class="names">Stephen & Kathlene</h1>
+    <h2>#SteppingIntoForeverWithKath</h2>
+    <p>Dusty Blue Wedding</p>
+    <p>July 2, 2026 • 4:00 PM</p>
+    <a href="#rsvp" class="btn">RSVP Now</a>
+  </div>
+</header>
+
+<section class="fade">
+<h3>Our Story</h3>
+<p style="text-align:center;max-width:700px;margin:auto;">
+Our love story wasn’t always easy, but every challenge made us stronger.
+Today, we choose each other — always.
+</p>
+</section>
+
+<section class="fade">
+<h3>Countdown</h3>
+<div id="countdown">
+  <div class="time-box"><span id="days">0</span>Days</div>
+  <div class="time-box"><span id="hours">0</span>Hours</div>
+  <div class="time-box"><span id="minutes">0</span>Minutes</div>
+  <div class="time-box"><span id="seconds">0</span>Seconds</div>
+</div>
+</section>
+
+<section class="fade">
+<h3>Wedding Details</h3>
+<div class="card">
+<p><b>Venue:</b> Cusina Lucas, Talamban Timesquare Cebu City</p>
+<p><b>Dress Code:</b> Dusty Blue</p>
+</div>
+</section>
+
+<section id="rsvp" class="fade">
+<h3>RSVP</h3>
+<form action="https://formsubmit.co/YOUR_EMAIL@gmail.com" method="POST">
+<input name="Name" placeholder="Your Name" required>
+<select name="Attendance" required>
+  <option value="">Will you attend?</option>
+  <option>Yes, happily!</option>
+  <option>Sorry, I can't make it.</option>
+</select>
+<input name="Guests" placeholder="Number of Guests">
+<textarea name="Message" rows="5" placeholder="Message"></textarea>
+<input type="hidden" name="_subject" value="Wedding RSVP">
+<input type="hidden" name="_captcha" value="false">
+<button type="submit">Submit RSVP</button>
+</form>
+</section>
+
+<section class="fade">
+<h3>Upload Your Photos</h3>
+<div class="card">
+<p>Share your memories with us 🤍</p><br>
+<a href="YOUR_GOOGLE_DRIVE_UPLOAD_LINK" class="btn">Share Photos</a>
+</div>
+</section>
+
+<section class="fade">
+<h3>Guestbook</h3>
+<form action="https://formsubmit.co/YOUR_EMAIL@gmail.com" method="POST">
+<input name="Name" placeholder="Your Name">
+<textarea name="Message" rows="5" placeholder="Leave us a message 🤍"></textarea>
+<input type="hidden" name="_subject" value="Wedding Guestbook Message">
+<input type="hidden" name="_captcha" value="false">
+<button type="submit">Sign Guestbook</button>
+</form>
+</section>
+
+<section class="fade">
+<h3>Gift Registry</h3>
+<p style="text-align:center;">Your presence is the greatest gift we could ask for.</p>
+</section>
+
+<footer>
+Thank you for being part of our life 💙
+</footer>
+
+<script>
+const targetDate = new Date("2026-07-02T16:00:00+08:00").getTime();
+setInterval(()=>{
+  const now=new Date().getTime();
+  const d=targetDate-now;
+  if(d<0){document.getElementById("countdown").innerHTML="Today is the day 💍";return;}
+  days.innerHTML=Math.floor(d/(1000*60*60*24));
+  hours.innerHTML=Math.floor((d%(1000*60*60*24))/(1000*60*60));
+  minutes.innerHTML=Math.floor((d%(1000*60*60))/(1000*60));
+  seconds.innerHTML=Math.floor((d%(1000*60))/1000);
+},1000);
+</script>
+
+</body>
+</html>
