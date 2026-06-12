@@ -57,16 +57,6 @@ header{
 .hero h2{font-size:22px;margin-top:12px;}
 .hero p{margin-top:14px;font-size:18px;}
 
-.btn{
-  display:inline-block;
-  margin-top:34px;
-  padding:14px 38px;
-  background:#6b9ac4;
-  color:#fff;
-  text-decoration:none;
-  border-radius:30px;
-}
-
 /* SECTIONS */
 section{
   max-width:1100px;
@@ -122,7 +112,7 @@ form{
   gap:15px;
 }
 
-input,textarea,select{
+input,textarea{
   padding:14px;
   border:1px solid #ddd;
   border-radius:8px;
@@ -156,14 +146,15 @@ footer{
     <h2>#SteppingIntoForeverWithKath</h2>
     <p>Dusty Blue Wedding</p>
     <p>July 2, 2026 • 4:00 PM</p>
-    <a href="#rsvp" class="btn">RSVP Now</a>
   </div>
 </header>
 
 <section class="fade">
 <h3>Our Story</h3>
 <p style="text-align:center;max-width:700px;margin:auto;">
-Our love story wasn’t always easy. We faced challenges, distance, misunderstandings, and moments where things felt uncertain. But through it all, we chose to stay, to listen, to grow, and to fight for each other. What started as a difficult journey slowly turned into something beautiful. <br><br>Every obstacle we overcame only made our bond stronger and more meaningful. We learned that love is not about perfection, but about choosing each other even on the hardest days. Today, we stand together not because everything was smooth, but because we never gave up on us. And now, we’re ready to begin a new chapter — as one.
+Our love story wasn’t always easy. We faced challenges, distance, misunderstandings, and moments where things felt uncertain. But through it all, we chose to stay, to listen, to grow, and to fight for each other.  
+<br><br>
+Every obstacle we overcame only made our bond stronger and more meaningful. We learned that love is not about perfection, but about choosing each other even on the hardest days. Today, we stand together not because everything was smooth, but because we never gave up on us. And now, we’re ready to begin a new chapter — as one.
 </p>
 </section>
 
@@ -185,28 +176,13 @@ Our love story wasn’t always easy. We faced challenges, distance, misunderstan
 </div>
 </section>
 
-<section id="rsvp" class="fade">
-<h3>RSVP</h3>
-<form action="https://formsubmit.co/murillostephenjay30@gmail.com" method="POST">
-<input name="Name" placeholder="Your Name" required>
-<select name="Attendance" required>
-  <option value="">Will you attend?</option>
-  <option>Yes, happily!</option>
-  <option>Sorry, I can't make it.</option>
-</select>
-<input name="Guests" placeholder="Number of Guests">
-<textarea name="Message" rows="5" placeholder="Message"></textarea>
-<input type="hidden" name="_subject" value="Wedding RSVP">
-<input type="hidden" name="_captcha" value="false">
-<button type="submit">Submit RSVP</button>
-</form>
-</section>
-
 <section class="fade">
 <h3>Upload Your Photos</h3>
 <div class="card">
 <p>Share your memories with us 🤍</p><br>
-<a href="https://drive.google.com/drive/folders/1R6EeR9NLz3Zhrto_KZm4UlbTqYExDC86" class="btn">Share Photos</a>
+<a href="https://drive.google.com/drive/folders/1R6EeR9NLz3Zhrto_KZm4UlbTqYExDC86" target="_blank" style="text-decoration:none;color:white;background:#6b9ac4;padding:14px 30px;border-radius:30px;display:inline-block;">
+Upload Photos
+</a>
 </div>
 </section>
 
@@ -235,7 +211,10 @@ const targetDate = new Date("2026-07-02T16:00:00+08:00").getTime();
 setInterval(()=>{
   const now=new Date().getTime();
   const d=targetDate-now;
-  if(d<0){document.getElementById("countdown").innerHTML="Today is the day 💍";return;}
+  if(d<0){
+    document.getElementById("countdown").innerHTML="Today is the day 💍";
+    return;
+  }
   days.innerHTML=Math.floor(d/(1000*60*60*24));
   hours.innerHTML=Math.floor((d%(1000*60*60*24))/(1000*60*60));
   minutes.innerHTML=Math.floor((d%(1000*60*60))/(1000*60));
@@ -245,3 +224,4 @@ setInterval(()=>{
 
 </body>
 </html>
+``
